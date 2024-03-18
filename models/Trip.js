@@ -36,12 +36,25 @@ const tripSchema = new mongoose.Schema({
             "Carpool3"
           ]
     },
+    startTime : {
+        type : Date,
+        default : Date.now()
+    },
+    endTime : {
+        type : Date,
+        default : Date.now()
+    },
     cashCost:{
         type : Number,
-        required : true
+        //required : true
+        //removed for testing
     },
     tagCost:{
         type : Number
+    },
+    polyline : {
+        type : String , 
+        required : true
     },
     routes:[
         {
